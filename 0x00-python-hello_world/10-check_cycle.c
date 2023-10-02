@@ -9,8 +9,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *ptr_copy[20], *fast, *slow;
-	int i;
+	listint_t *fast, *slow;
 
 	if (!list)
 		return (0);
