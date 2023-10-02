@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 <<< $PYCODE
+touch pycode.py; echo $PYCODE >> pycode.py | python3 pycode.py; rm pycode.py
