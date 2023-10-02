@@ -1,5 +1,8 @@
-/**
- * check_cycle - checks for cycle
+#include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
+
+/** check_cycle - checks for cycle
  * @list: linked list
  *
  * Return: 1 (success)
