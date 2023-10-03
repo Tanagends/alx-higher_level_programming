@@ -6,5 +6,3 @@ def print_last_digit(number):
         last = number % 10
         print("{0}".format(last), end="")
         return last
-result = print_last_digit(88)
-print(result)
