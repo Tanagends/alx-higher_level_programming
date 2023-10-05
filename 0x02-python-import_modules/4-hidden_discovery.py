@@ -8,4 +8,4 @@ if __name__ == "__main__":
     li.sort()
     for element in li:
         if not element.startswith("_"):
-            print(ielement)
+            print(element)
