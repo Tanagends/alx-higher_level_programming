@@ -13,7 +13,7 @@ if __name__ == "__main__":
         sys.exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    match(argv[2]):
+    match(sys.argv[2]):
         case "+":
             print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
         case "-":
