@@ -2,8 +2,10 @@
 
 import hidden_4
 
+
 if __name__ == "__main__":
-    li = dir().sort()
+    li = dir()
+    li.sort()
     for element in li:
         if not element.startswith("_"):
             print(element)
