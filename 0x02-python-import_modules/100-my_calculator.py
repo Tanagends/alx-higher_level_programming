@@ -5,14 +5,14 @@ import sys
 
 
 if __name__ == "__main__":
-    if len(argv != 4):
+    if len(sys.argv != 4):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    if argv[2] not in "+-/*":
+    if sys.argv[2] not in "+-/*":
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
-    a = int(argv[1])
-    b = int(argv[3])
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
     match(argv[2]):
         case "+":
             print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
