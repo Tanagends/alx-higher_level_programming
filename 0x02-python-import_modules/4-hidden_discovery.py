@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
-import hidden_4
+import imp
 
 
 if __name__ == "__main__":
-    li = dir()
+    module = imp.load_compiled("hidden", "hidden_4.pyc")
+    li = dir(module)
     li.sort()
     for element in li:
         if not element.startswith("_"):
