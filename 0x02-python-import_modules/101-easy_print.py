@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-exec("#pythoniscool\n")
+__builtins__.__dict__['stdout'].write("#pythoniscool")
