@@ -13,15 +13,15 @@ if __name__ == "__main__":
         sys.exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    match(sys.argv[2]):
-        case "+":
-            print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
-        case "-":
-            print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
-        case "/":
-            print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
-        case "*":
-            print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
-        case _:
-            print("Unknown operator. Available operators: +, -, * and /")
-            sys.exit(1)
+    operator = (sys.argv[2]):
+    if operator == "+":
+        print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+    elif operator == "-":
+        print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
+    elif operator == "/":
+        print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+    elif operator == "*":
+        print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
