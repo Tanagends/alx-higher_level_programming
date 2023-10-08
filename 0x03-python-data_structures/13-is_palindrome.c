@@ -11,6 +11,7 @@ int is_palindrome(listint_t **head)
 
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
 		return (1);
+
 	copy = *head;
 	for (count = 0; copy != NULL; count++)
 		copy = copy->next;
@@ -20,30 +21,20 @@ int is_palindrome(listint_t **head)
 		copy = copy->next;
 	if (count % 2 == 1)
 		copy = copy->next;
-	/*if (!arr)*/
-	/*	exit(1);*/
+
 	for (i = half - 1; i >= 0; i--)
 	{
 		arr[i] = copy->n;
 		copy = copy->next;
 	}
 	copy = *head;
+
 	for (i = 0; i < half; i++)
 	{
 		if (copy->n != arr[i])
-		{
-			/*free(arr);*/
 			return (0);
-		}
 		copy = copy->next;
 	}
-	/*free(arr);*/
+
 	return (1);
 }
-/*int main()
-{
-	listint_t *c = NULL;
-
-	printf("%i", is_palindrome(&c));
-	return (0);
-}*/
