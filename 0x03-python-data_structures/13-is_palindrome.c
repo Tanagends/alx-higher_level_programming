@@ -2,13 +2,12 @@
 /**
  * is_palindrome - checks if a singly linked list is a palindrome.
  * @head: pointer to the head pointer
- *
  * Return: 1 (If palindrome 0 Otherwise)
  */
 int is_palindrome(listint_t **head)
 {
 	listint_t *copy;
-	int count = 0, half, i, *arr;
+	int count = 0, half, i, arr[3000];
 
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
 		return (1);
@@ -21,7 +20,6 @@ int is_palindrome(listint_t **head)
 		copy = copy->next;
 	if (count % 2 == 1)
 		copy = copy->next;
-	arr = malloc(sizeof(int) * half);
 	if (!arr)
 		exit(1);
 	for (i = half - 1; i >= 0; i--)
@@ -34,11 +32,11 @@ int is_palindrome(listint_t **head)
 	{
 		if (copy->n != arr[i])
 		{
-			free(arr);
+			/*free(arr);*/
 			return (0);
 		}
 		copy = copy->next;
 	}
-	free(arr);
+	/*free(arr);*/
 	return (1);
 }
