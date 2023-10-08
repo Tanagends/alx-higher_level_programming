@@ -40,10 +40,10 @@ int is_palindrome(listint_t **head)
 	/*free(arr);*/
 	return (1);
 }
-int main()
+/*int main()
 {
 	listint_t *c = NULL;
 
 	printf("%i", is_palindrome(&c));
 	return (0);
-}
+}*/
