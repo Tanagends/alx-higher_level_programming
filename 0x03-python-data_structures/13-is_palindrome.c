@@ -7,10 +7,10 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t copy;
+	listint_t *copy;
 	int count = 0, half, i, *arr;
 
-	if (head == NULL || *head == NULL || *head->next == NULL)
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
 		return (1);
 	copy = *head;
 	for (count = 0; copy != NULL; count++)
