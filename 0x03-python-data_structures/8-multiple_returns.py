@@ -4,4 +4,3 @@ def multiple_returns(sentence):
         return (0, None)
     result = (len(sentence), sentence[0])
     return result
-print(multiple_returns(""))
