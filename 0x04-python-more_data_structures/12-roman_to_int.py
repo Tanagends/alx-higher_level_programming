@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
         return 0
     for char in roman_string:
         if char not in roman_list:
-            return 0
+            continue
         val_list.append(roman[char])
     for i in range(len(val_list) - 1):
         if val_list[i] < val_list[i + 1]:
