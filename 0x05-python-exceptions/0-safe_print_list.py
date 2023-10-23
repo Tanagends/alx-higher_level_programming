@@ -12,5 +12,3 @@ def safe_print_list(my_list=[], x=0):
             return count
     print()
     return count
-
-print(safe_print_list([1, 2, 3], 7))
