@@ -10,4 +10,3 @@ def safe_print_division(a, b):
         return result
         #except NameError:
         #    return None
-print(safe_print_division(1, 0))
