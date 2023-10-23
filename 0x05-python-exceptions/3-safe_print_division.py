@@ -3,10 +3,11 @@ def safe_print_division(a, b):
     try:
         result = a / b
     except ZeroDivisionError:
-        pass
+        result = None
     finally:
-        try:
-            print("Inside result: {}".format(result))
-            return result
-        except NameError:
-            return None
+        #try:
+        print("Inside result: {}".format(result))
+        return result
+        #except NameError:
+        #    return None
+print(safe_print_division(1, 0))
