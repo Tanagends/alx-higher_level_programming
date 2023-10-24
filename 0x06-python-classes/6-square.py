@@ -38,14 +38,14 @@ class Square:
         Args:
             value: new position.
         Raises:
-            TypeError: if not tuple of 2 ints
+            TypeError: if not tuple of 2 ints.
         """
         return self.__position
 
     @position.setter
     def position(self, value):
         if len(value) != 2 or False in [True if type(num) == int else
-           False for num in value]:
+           False for num in value] or not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
