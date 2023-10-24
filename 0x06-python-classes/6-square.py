@@ -32,11 +32,8 @@ class Square:
 
     @property
     def position(self):
-        """
-        retrieves the x,y plane position of square
+        """retrieves the x,y plane position of square
 
-        Args:
-            value: new position.
         Raises:
             TypeError: if not tuple of 2 ints.
         """
@@ -44,6 +41,12 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """sets square's position
+        Args: value: squares position
+
+        Raises:
+            TypeError: if value not a tuple of 2 ints
+        """
         if len(value) != 2 or False in [True if type(num) == int else
            False for num in value] or not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
