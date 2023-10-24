@@ -32,7 +32,14 @@ class Square:
 
     @property
     def position(self):
-        """retrieves the x,y plane position of square"""
+        """
+        retrieves the x,y plane position of square
+
+        Args:
+            value: new position.
+        Raises:
+            TypeError: if not tuple of 2 ints
+        """
         return self.__position
 
     @position.setter
