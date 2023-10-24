@@ -25,6 +25,9 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
 
+    def __str__(self):
+        self.my_print()
+
     @property
     def size(self):
         """Retrives a square size"""
@@ -47,8 +50,8 @@ class Square:
         Raises:
             TypeError: if value not a tuple of 2 ints
         """
-        if len(value) != 2 or False in [True if type(num) == int else
-           False for num in value] or not isinstance(value, tuple):
+        if not isinstance(value, tuple) or len(value) != 2 or False in [True if type(num) == int else
+           False for num in value]:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
