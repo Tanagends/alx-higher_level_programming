@@ -2,11 +2,7 @@
 #0-square.py
 
 class Square:
-    """Represents a square
-
-    Attributes:
-        __size: square size
-    """
+    """Represents a square"""
 
     def __init__(self, size):
         """Instantiates the square class
