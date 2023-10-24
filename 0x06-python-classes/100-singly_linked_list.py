@@ -54,7 +54,7 @@ class SinglyLinkedList:
         prnt = ""
         node = self.head
         while node:
-            prnt += str(node.__date) + "\n"
+            prnt += str(node.__data) + "\n"
             node = node.next_node
 
         return prnt
@@ -74,7 +74,8 @@ class SinglyLinkedList:
             self.head = node
             return
 
-        while node.next_node and node.next_node.data < value:
+        location = self.head
+        while location.next_node and location.next_node.data < value:
             node = node.next_node
 
         if location.next_node:
