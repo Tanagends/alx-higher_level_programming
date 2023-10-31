@@ -7,6 +7,4 @@ def print_square(size):
         raise ValueError("size must be >= 0")
 
     for _ in range(size):
-        print("#" * size + "\n")
-    if size == 0:
-        print()
+        print("#" * size)
