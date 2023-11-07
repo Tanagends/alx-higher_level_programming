@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
 """My Serialization Module"""
+import json
 
 
 def to_json_string(my_obj):
     """Serializes object"""
-    return json.dumps(my_obj)
+    return str(json.dumps(my_obj))
