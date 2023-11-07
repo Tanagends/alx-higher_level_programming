@@ -12,9 +12,9 @@ class Student:
 
     def to_json(self, attrs=None):
         """retrieves a dictionary representation of an instance"""
-        if isinstance(attrs, list) and not False in\
-                [True if isinstance(el, str) else False for el in attrs]:
-            new_dict = dict(filter(lambda key, val: key in attrs, attrs)
+        if isinstance(attrs, list) and not (False in
+           [True if isinstance(el, str) else False for el in attrs]):
+            new_dict = dict(filter(lambda key: key[0] in attrs,
+                            self.__dict__.items()))
             return new_dict
-            
         return self.__dict__
