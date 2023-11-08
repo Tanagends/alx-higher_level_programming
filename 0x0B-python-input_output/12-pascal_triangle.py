@@ -3,11 +3,13 @@
 
 
 def pascal_triangle(n):
-    """returns a list of int listsrepresenting a pascal triangle"""
-    if n <= 0:
-        return []
+    """makes a list of int lists representing a pascal triangle
+       Args: n : the height of a pascal triangle
+    """
 
     pascal_list = []
+    if n <= 0:
+        return []
 
     for i in range(n):
         match i:
