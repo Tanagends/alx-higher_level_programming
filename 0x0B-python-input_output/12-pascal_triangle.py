@@ -1,30 +1,19 @@
 #!/usr/bin/python3
-"""Creates a pascal triangle as a list of lists"""
+"""module defines a Pascal's Triangle function"""
 
 
 def pascal_triangle(n):
-    """makes a list of int lists representing a pascal triangle
-       Args: n : the height of a pascal triangle
+    """Represents Pascal's Triangle of size n
     """
-
-    pascal_list = []
     if n <= 0:
         return []
 
-    for i in range(n):
-        match i:
-            case 0:
-                pascal_list.append([1])
-                continue
-            case 1:
-                pascal_list.append([1, 1])
-                continue
-            case _:
-                pass
-        row = [1]
-        row.extend(list(map((lambda x, y: x + y),
-                        pascal_list[-1], pascal_list[-1][1:])))
-        row.append(1)
-        pascal_list.append(row)
-
-    return pascal_list
+    triangles = [[1]]
+    while len(triangles) != n:
+        tri = triangles[-1]
+        tmp = [1]
+        for i in range(len(tri) - 1):
+            tmp.append(tri[i] + tri[i + 1])
+        tmp.append(1)
+        triangles.append(tmp)
+    return triangles
