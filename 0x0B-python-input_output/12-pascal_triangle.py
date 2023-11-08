@@ -21,7 +21,7 @@ def pascal_triangle(n):
                 pass
         row = [1]
         row.extend(list(map((lambda x, y: x + y),
-        pascal_list[-1], pascal_list[-1][1:])))
+                        pascal_list[-1], pascal_list[-1][1:])))
         row.append(1)
         pascal_list.append(row)
 
