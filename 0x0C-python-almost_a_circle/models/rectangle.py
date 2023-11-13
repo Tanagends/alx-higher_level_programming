@@ -56,9 +56,9 @@ class Rectangle(Base):
         """Retrieves y"""
         return self.__y
 
-    @width.setter
-    def width(self, value):
+    @y.setter
+    def y(self, value):
         """Sets y"""
         if not isinstance(value, int):
-            raise ValueError("y cshould be an int")
+            raise ValueError("y should be an int")
         self.__y = value
