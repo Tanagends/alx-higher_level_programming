@@ -14,6 +14,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -24,7 +25,9 @@ class Rectangle(Base):
     def width(self, value):
         """Sets width"""
         if not isinstance(value, int):
-            raise ValueError("width should be an int")
+            raise TypeError("width should be an int")
+        if value <= 0:
+            raise ValueError("width must be greater than 0")
         self.__width = value
 
     @property
@@ -36,7 +39,9 @@ class Rectangle(Base):
     def height(self, value):
         """Sets height"""
         if not isinstance(value, int):
-            raise ValueError("height should be an int")
+            raise TypeError("height should be an int")
+        if value <= 0:
+            raise ValueError("height must be greater than 0")
         self.__height = value
 
     @property
@@ -45,10 +50,12 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def width(self, value):
+    def x(self, value):
         """Sets x"""
         if not isinstance(value, int):
-            raise ValueError("x should be an int")
+            raise TypeError("x should be an int")
+        if value < 0:
+            raise ValueError("x must be greater than or equal to 0")
         self.__x = value
 
     @property
@@ -60,5 +67,7 @@ class Rectangle(Base):
     def y(self, value):
         """Sets y"""
         if not isinstance(value, int):
-            raise ValueError("y should be an int")
+            raise TypeError("y should be an int")
+        if value < 0:
+            raise ValueError("y must be greater than 0")
         self.__y = value
