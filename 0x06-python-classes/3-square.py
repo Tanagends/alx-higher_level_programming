@@ -5,6 +5,7 @@
 class Square:
     """empty sqaure class"""
     def __init__(self, size=0):
+        self.size = size
 
         @property
         def size(self):
@@ -17,7 +18,7 @@ class Square:
                 raise TypeError("size must be an integer")
             if size < 0:
                 raise ValueError("size must be >= 0")
-            self._size = size
+            self.__size = size
 
     def area(self):
         """function to return area of the square"""
