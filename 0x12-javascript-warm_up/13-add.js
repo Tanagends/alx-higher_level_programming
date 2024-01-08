@@ -1,5 +1,5 @@
 #!/usr/bin/node4
 
-export function add (a, b) {
+export.add = function (a, b) {
   return (a + b);
 }

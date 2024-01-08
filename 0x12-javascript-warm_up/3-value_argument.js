@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-if (process.argv.length < 3) {
+if (isNaN(process.argv[2])) {
   console.log('No argument');
 } else {
   console.log(process.argv[2]);
