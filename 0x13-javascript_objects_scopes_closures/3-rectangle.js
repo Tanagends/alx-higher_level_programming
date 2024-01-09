@@ -8,7 +8,7 @@ class Rectangle {
     }
   }
 
-  print() {
+  print () {
     let row = '';
     for (let i = 0; i < this.width; i++) {
       row += 'X';
@@ -18,3 +18,5 @@ class Rectangle {
     }
   }
 }
+
+module.exports = Rectangle;
