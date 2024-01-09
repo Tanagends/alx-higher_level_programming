@@ -10,4 +10,4 @@ const contentA = fs.readFileSync(fileA, 'utf8');
 const contentB = fs.readFileSync(fileB, 'utf8');
 const concatenatedContent = contentA.trim() + '\n' + contentB.trim() + '\n';
 
-fs.writeFileSync(destinationFile, concatenatedContent);
+fs.writeFileSync(destinationFile, concatenatedContent, { flag: 'a' });
