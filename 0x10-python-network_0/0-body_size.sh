@@ -1,9 +1,3 @@
-#!/usr/bin/env bash
-#Sends a request to an URL and displays the size of the response
-
-if [ $# -lt 1 ]
-then
-  exit 1
-else
-  curl -s $1 | wc -c
-fi
+#!/bin/bash
+# Get the byte size of the HTTP response header for a given URL.
+curl -s "$1" | wc -c

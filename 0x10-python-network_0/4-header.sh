@@ -1,9 +1,3 @@
-#!/usr/bin/env bash
-#Requests get to url and a header variable
-
-if [ $# -lt 1 ]
-then
-  exit 1
-else
-  curl -sH "X-School-User-Id: 98" "$1"
-fi
+#!/bin/bash
+# send a GET request to the URL using curl, and display the body of the response
+curl -sH "X-School-User-Id: 98" "$1"

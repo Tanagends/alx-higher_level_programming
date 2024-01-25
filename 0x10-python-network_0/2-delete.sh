@@ -1,9 +1,3 @@
-#!/usr/bin/env bash
-#Requests delete to url and displays response body
-
-if [ $# -lt 1 ]
-then
-  exit 1
-fi
-
-curl -s $1
+#!/bin/bash
+#a Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
+curl -sX DELETE "$1"
